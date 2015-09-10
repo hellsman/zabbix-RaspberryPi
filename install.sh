@@ -19,7 +19,7 @@ cp scripts/*.sh /usr/share/zabbix-agent/scripts/
 chown -R zabbix:zabbix /usr/share/zabbix-agent/scripts
 chmod +x /usr/share/zabbix-agent/scripts/*.sh
 #Добавляем пользователя zabbix в группу video, без этого нельзя получить температуру GPU
-usernod -G video zabbix
+usermod -G video zabbix
 
 # Перезапускаем Zabbix Agent
 service zabbix-agent restart
